@@ -48,7 +48,10 @@
         }
 
         //Convert Meter to Feet
-        public static double meterToFeet(double input) { return input / 0.3048D; }
+        private static float meterToFeet(float input) { return input / 0.3048f; }
+
+        //Convert Meter to Inch
+        private static float meterToInch(float input) { return input / 0.0254f; }
 
         //Output Method
         public static void output(int optionID)
@@ -57,7 +60,48 @@
             switch (optionID)
             {
                 case 99:
-                    
+                    Console.WriteLine("Press Enter to Exit");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                    break;
+                case 01:
+                    try
+                    {
+                        Console.WriteLine("Meter to Foot");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + meterToFeet(input) + "ft");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 02:
+                    try
+                    {
+                        Console.WriteLine("Meter to Inch");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + meterToInch(input) + "in");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
             }
         }
     }
