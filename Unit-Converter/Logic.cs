@@ -40,9 +40,12 @@
                 Console.WriteLine("");
                 return option;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Console.WriteLine("Error: " + e.ToString());
+                Console.WriteLine("Error: Invalid Input!");
+                Console.WriteLine("Error: Only Numbers are Valid!");
+                Console.WriteLine("Press Enter to Return to the Menu");
+                Console.ReadKey();
                 return -1;
             }
         }
@@ -52,6 +55,24 @@
 
         //Convert Meter to Inch
         private static float meterToInch(float input) { return input / 0.0254f; }
+
+        //Convert Meter to Yard
+        private static float meterToYard(float input) { return input / 0.9144f; }
+
+        //Convert Feet to Meter
+        private static float feetToMeter(float input) { return input * 0.3048f; }
+
+        //Convert Inch to Meter
+        private static float inchToMeter(float input) { return input * 0.0254f; }
+
+        //Convert Yard to Meter
+        private static float yardToMeter(float input) { return input * 0.9144f; }
+
+        //Convert Fahrenheit to Celsius
+        private static float fahrenheitToCelsius(float input) 
+        { 
+            return (input - 32) * 5 / 9; 
+        }
 
         //Output Method
         public static void output(int optionID)
@@ -91,6 +112,101 @@
                         float input = float.Parse(Console.ReadLine());
                         Console.Write("");
                         Console.WriteLine("Output: " + meterToInch(input) + "in");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 03:
+                    try
+                    {
+                        Console.WriteLine("Meter to Yard");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + meterToYard(input) + " yd");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 04:
+                    try
+                    {
+                        Console.WriteLine("Feet to Meter");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + feetToMeter(input) + "m");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 05:
+                    try
+                    {
+                        Console.WriteLine("Inch to Meter");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + inchToMeter(input) + "m");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 06:
+                    try
+                    {
+                        Console.WriteLine("Yard to Meter");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + yardToMeter(input) + "m");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 07:
+                    try
+                    {
+                        Console.WriteLine("Fahrenheit to Celsius");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + fahrenheitToCelsius(input) + "°C");
                         Console.WriteLine("Press Enter to Continue");
                         Console.ReadKey();
                     }
