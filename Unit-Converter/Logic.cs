@@ -71,8 +71,32 @@
         //Convert Fahrenheit to Celsius
         private static float fahrenheitToCelsius(float input) 
         { 
-            return (input - 32) * 5 / 9; 
+            return (input - 32f) * 5f / 9f; 
         }
+
+        //Convert Celsius to Fahrenheit
+        private static float celsiusToFahrenheit(float input)
+        {
+            return input * 9f / 5f + 32f;
+        }
+
+        //Convert Gram to Ounce
+        private static float gramToOunce(float input) { return input / 28.34952f; }
+
+        //Convert Gram to Pound
+        private static float gramToPound(float input) { return input / 453.59237f; }
+
+        //Convert Gram to Kilogram
+        private static float gramToKilogram(float input) { return input / 1000f; }
+
+        //Convert Ounce to Gram
+        private static float ounceToGram(float input) { return input * 28.34952f; }
+
+        //Convert Pound to Gram
+        private static float poundToGram(float input) { return input * 453.59237f; }
+
+        //Convert Kilogram to Gram
+        private static float kilogramToGram(float input) { return input * 1000f; }
 
         //Output Method
         public static void output(int optionID)
@@ -207,6 +231,139 @@
                         float input = float.Parse(Console.ReadLine());
                         Console.Write("");
                         Console.WriteLine("Output: " + fahrenheitToCelsius(input) + "°C");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 08:
+                    try
+                    {
+                        Console.WriteLine("Celsius to Fahrenheit");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + celsiusToFahrenheit(input) + "°F");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 09:
+                    try
+                    {
+                        Console.WriteLine("Gram to Ounce");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + gramToOunce(input) + "oz");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 10:
+                    try
+                    {
+                        Console.WriteLine("Gram to Pound");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + gramToPound(input) + "lb");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 11:
+                    try
+                    {
+                        Console.WriteLine("Gram to Kilogram");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + gramToKilogram(input) + "kg");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 12:
+                    try
+                    {
+                        Console.WriteLine("Ounces to Gram");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + ounceToGram(input) + "g");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 13:
+                    try
+                    {
+                        Console.WriteLine("Pound to Gram");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + poundToGram(input) + "g");
+                        Console.WriteLine("Press Enter to Continue");
+                        Console.ReadKey();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Invalid Input!");
+                        Console.WriteLine("Error: Only Numbers are Valid!");
+                        Console.WriteLine("Press Enter to Return to the Menu");
+                        Console.ReadKey();
+                    }
+                    break;
+                case 14:
+                    try
+                    {
+                        Console.WriteLine("Kilogram to Gram");
+                        Console.Write("Input: ");
+                        float input = float.Parse(Console.ReadLine());
+                        Console.Write("");
+                        Console.WriteLine("Output: " + kilogramToGram(input) + "g");
                         Console.WriteLine("Press Enter to Continue");
                         Console.ReadKey();
                     }
