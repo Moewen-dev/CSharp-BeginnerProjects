@@ -9,5 +9,5 @@ while (true)
     Console.Clear();
     Logic.SetMainMenu();
     Console.ReadKey();
-    Logic.exit();
+    Logic.stop();
 }

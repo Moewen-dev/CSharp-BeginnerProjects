@@ -3,7 +3,6 @@
  * Made by Meowen-dev
  */
 
-
 internal class Logic
 {
     //Print Main Menu in CLI
@@ -18,5 +17,5 @@ internal class Logic
     }
 
     //Method to exit the Program
-    public static void exit () { Environment.Exit(0); }
+    public static void stop () { Environment.Exit(0); }
 }
