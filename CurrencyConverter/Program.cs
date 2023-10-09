@@ -8,6 +8,7 @@ while (true)
 {
     Console.Clear();
     Logic.SetMainMenu();
-    Console.ReadKey();
-    Logic.stop();
+    string input = Logic.getInputCurrency();
+    if (input == "exit" ) { Logic.stop(); }
+
 }
